@@ -66,6 +66,8 @@ set(HDRS
 )
 
 add_library(midifile STATIC ${SRCS} ${HDRS})
+add_library(smf::midifile ALIAS midifile)
+target_include_directories(midifile PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
 
 ##############################
 ##
